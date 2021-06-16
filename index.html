@@ -40,6 +40,14 @@
 		    "label":"Název společnosti",
 		    "transcriptFields":[ "Company_Name__c" ],
 		    "displayToAgent":true
+		},{
+		    "label":"Jméno",
+		    "transcriptFields":[ "First_Name__c" ],
+		    "displayToAgent":true
+		},{
+		    "label":"Příjmení",
+		    "transcriptFields":[ "Last_Name__c" ],
+		    "displayToAgent":true
 		}];
 		embedded_svc.settings.extraPrechatInfo = [
 		    {
@@ -76,6 +84,8 @@
 		    function(event) {
 			embedded_svc.settings.extraPrechatFormDetails[0].value = event.detail.icoValue;
 			embedded_svc.settings.extraPrechatFormDetails[1].value = event.detail.companyName;
+		    	embedded_svc.settings.extraPrechatFormDetails[2].value = event.detail.firstName;
+	                embedded_svc.settings.extraPrechatFormDetails[3].value = event.detail.lastName;
 			// Fire startChat callback.
 			event.detail.callback();
 		    },
