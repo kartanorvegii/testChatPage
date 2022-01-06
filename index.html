@@ -92,10 +92,10 @@
 		    false
 		);
 		embedded_svc.init(
-			'https://fleetcor-eu--uat.my.salesforce.com',
-			'https://uat-e2efleetcor.cs128.force.com',
+			'https://fleetcor-eu--dev015.my.salesforce.com',
+			'https://dev015-e2efleetcor.cs128.force.com',
 			gslbBaseURL,
-			'00D3N000000HHRN',
+			'00D3N0000003tyV',
 			'CCS_Contact_Center',
 			{
 				baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
@@ -110,7 +110,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://fleetcor-eu--uat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://fleetcor-eu--dev015.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
@@ -119,4 +119,4 @@
 		initESW('https://service.force.com');
 	}
 </script>
-	</body></html>
+</body></html>
